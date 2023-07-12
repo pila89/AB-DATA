@@ -1,0 +1,50 @@
+<div class="card flex justify-content-center">
+  <form [formGroup]="userForm">
+    <div style="display: flex;justify-content: flex-start;">
+      <div class="flex flex-column gap-2" >
+        <label htmlFor="firstName">First Name</label>
+        <input pInputText id="firstName" placeholder="firstName" formControlName="firstName" />
+      </div>
+      <div>
+        <label htmlFor="lastName">Last Name</label>
+        <input pInputText id="lastName" placeholder="Last Name" formControlName="lastName" />
+      </div>
+    </div>
+    <div>
+      <label htmlFor="email">E Mail</label>
+      <input type="email" pInputText id="email" placeholder="E-Mail Adress" formControlName="email" />
+    </div>
+    <div>
+      <label htmlFor="phone">Phone #</label>
+      <input type="number" id="phone" placeholder="(845)555-1212" formControlName="phone" />
+    </div>
+    <div>
+      <label htmlFor="address">Address</label>
+      <input pInputText id="address" placeholder="Address" formControlName="address" />
+    </div>
+    <div>
+      <label htmlFor="city">City</label>
+      <input pInputText id="city" placeholder="city" formControlName="city" />
+    </div>
+    <div>
+      <label htmlFor="State">State</label>
+      <p-dropdown optionLabel="state" [options]="states" formControlName="state"></p-dropdown>
+    </div>
+    <div>
+      <label htmlFor="zipCode">Zip Code</label>
+      <input  id="zipCode" placeholder="ZipCode" formControlName="zipCode" />
+    </div>
+    <div>
+      <label htmlFor="webSiteOrDomainName">Website Or Domain Name</label>
+      <input pInputText id="webSiteOrDomainName" placeholder="Website or domain name"
+        formControlName="webSiteOrDomainName" />
+    </div>
+    <div>
+      <label htmlFor="WebsiteOrDomainName">Project Description</label>
+      <textarea rows="5" cols="30" pInputTextarea placeholder="Project Description"
+        formControlName="projectDescription"></textarea>
+    </div>
+
+  </form>
+</div>
+<button (click)="send()">Send</button>
